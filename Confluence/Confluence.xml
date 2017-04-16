@@ -39,7 +39,6 @@
       </Port>
     </Publish>
   </Networking>
-  <Environment/>
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/confluence</HostDir>
