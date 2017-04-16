@@ -9,7 +9,8 @@
 
 [center][font size=4]Confluence[/font][/center]
 
-V.0.1
+  [font size=4]2017.4.16[/font]
+  - created unraid file 
   </Changes>
   <Overview>
  Confluence on unraid docker
@@ -18,24 +19,34 @@ V.0.1
    Confluence on unraid docker! I would add more but it just doest what it says. 
   </Description>
   <Registry>https://hub.docker.com/r/atlassian/confluence-server/</Registry>
-  <GitHub>https://github.com/limetech/dockerapp-plex</GitHub>
-  <Repository>limetech/plex</Repository>
+  <GitHub>https://github.com/djpain</GitHub>
+  <Repository>unraid/Confluence</Repository>
   <Support>http://lime-technology.com/forum/index.php?topic=40654.0</Support>
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
   <Networking>
-    <Mode>host</Mode>
-    <Publish/>
+        <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8090</HostPort>
+        <ContainerPort>8090</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    <Port>
+        <HostPort>8091</HostPort>
+        <ContainerPort>8091</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
   </Networking>
   <Environment/>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/PlexMediaServer</HostDir>
-      <ContainerDir>/config</ContainerDir>
+      <HostDir>/mnt/user/appdata/confluence</HostDir>
+      <ContainerDir>/var/atlassian/application-data/confluence</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:32400]/web/index.html</WebUI>
+  <WebUI>http://[IP]:[PORT:8090]</WebUI>
   <Banner></Banner>
-  <Icon>http://d2631fvi2jdnb6.cloudfront.net/docker/limetech/plex.png</Icon>
+  <Icon>http://i.imgur.com/OuRFWey.png</Icon>
 </Containers>
