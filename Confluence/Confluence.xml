@@ -37,6 +37,7 @@
         <ContainerPort>8091</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
+    </Publish>
   </Networking>
   <Environment/>
   <Data>
