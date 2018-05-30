@@ -10,17 +10,17 @@
 [center][font size=4]Confluence[/font][/center]
 
   [font size=4]2017.4.16[/font]
-  - created unraid file 
+  - created unraid file
   </Changes>
   <Overview>
  Confluence on unraid docker
   </Overview>
   <Description>
-   Confluence on unraid docker! I would add more but it just doest what it says. 
+   Confluence on unraid docker! I would add more but it just doest what it says.
   </Description>
   <Registry>https://hub.docker.com/r/atlassian/confluence-server/</Registry>
   <GitHub>https://github.com/djpain</GitHub>
-  <Repository>unraid/Confluence</Repository>
+  <Repository>atlassian/confluence-server</Repository>
   <Support>http://lime-technology.com/forum/index.php?topic=40654.0</Support>
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
